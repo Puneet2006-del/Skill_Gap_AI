@@ -11,7 +11,7 @@ matched_skills = [skill for skill in job_skills if skill in resume_skills]
 missing_skills = [skill for skill in job_skills if skill not in resume_skills]
 
 # output
-print("\n📝 Skill Matching Result:")
+print("\n Skill Matching Result:")
 print("----------------------------------")
 print("Matched Skills:", ", ".join(matched_skills) if matched_skills else "None")
 print("Missing Skills:", ", ".join(missing_skills) if missing_skills else "None")
@@ -24,3 +24,4 @@ Skill Matching Result:
 ----------------------------------
 Matched Skills: python, java, html
 Missing Skills: None
+
