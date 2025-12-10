@@ -16,3 +16,11 @@ print("----------------------------------")
 print("Matched Skills:", ", ".join(matched_skills) if matched_skills else "None")
 print("Missing Skills:", ", ".join(missing_skills) if missing_skills else "None")
 
+# Ouput
+Enter your resume skills (comma-separated): Python, Java, HTML
+Enter job required skills (comma-separated): Python, Java, HTML
+
+Skill Matching Result:
+----------------------------------
+Matched Skills: python, java, html
+Missing Skills: None
