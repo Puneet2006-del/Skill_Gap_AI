@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skill Extraction using NLP</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Skill Extraction using NLP</h1>
+    <p class="subtitle">Milestone 2 – Resume Skill Analysis</p>
+
+    <div class="card upload-card">
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="resume" required>
+            <button type="submit">Upload & Extract Skills</button>
+        </form>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </div>
+
+    <div class="skills-section">
+
+        <div class="card">
+            <h2>Technical Skills</h2>
+            <div class="tags">
+                {% if tech_skills %}
+                    {% for skill in tech_skills %}
+                        <span class="tag tech">{{ skill }}</span>
+                    {% endfor %}
+                {% else %}
+                    <p class="empty">No technical skills detected</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Soft Skills</h2>
+            <div class="tags">
+                {% if soft_skills %}
+                    {% for skill in soft_skills %}
+                        <span class="tag soft">{{ skill }}</span>
+                    {% endfor %}
+                {% else %}
+                    <p class="empty">No soft skills detected</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
